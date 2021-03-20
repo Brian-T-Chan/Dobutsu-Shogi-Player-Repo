@@ -1,5 +1,5 @@
 # Dobutsu-Shogi-Player-Repo
-This repository contains a computer program that plays Dobutsu Shogi. It uses alpha-beta pruning and it has five levels of difficulty (ranging from 3 ply to 7 ply). It uses a command-line style user interface. To run the program, run main.py. The repository contains six files.
+This repository contains a computer program that plays Dobutsu Shogi. It uses alpha-beta pruning and it has five levels of difficulty (ranging from 3 ply to 7 ply). It uses a command-line style user interface. To run the program, run main.py. In addition to the licensing file and (this) readme file, the repository contains the following six files.
 
 alphabeta.py : Runs the alpha-beta pruning algorithm to determine moves.
 
