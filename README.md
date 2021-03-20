@@ -3,7 +3,7 @@ This repository contains a computer program that plays Dobutsu Shogi. It uses al
 
 alphabeta.py : Runs the alpha-beta pruning algorithm to determine moves.
 
-board.py : Constructs the game board along with all pieces, and provides essential functionality such as when one player has won the game.
+board.py : Constructs the game board along with all pieces, and provides essential functionality such as determining when one player has won the game.
 
 board_display.py : Displays the pieces and the game board.
 
