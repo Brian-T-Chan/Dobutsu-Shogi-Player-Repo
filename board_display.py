@@ -5,9 +5,12 @@
 a, b = 'A', 'B'
 
 # The following program displays the Dobutsu Shogi game board along with the
-# locations of all the pieces in the board and in the player's hands. The
-# pieces are maked with upper or lower-case letters. Which letters are being
-# used indicate the type of piece and whether the letter is upper or lower-
+# locations of all the pieces in the board and in the player's hands. 
+
+# Specifically, the program converts the data structure in board.py that
+# represents the game board and the pieces into a visual display. The pieces
+# are maked with upper or lower-case letters. Which letters are being used
+# indicate the type of piece and whether the letter is upper or lower-
 # case determines which side the piece belongs to. Specifically,
 #
 # l, L : lion
@@ -18,26 +21,21 @@ a, b = 'A', 'B'
 #
 # A lower case letter represents a piece under Player A's control and an
 # upper case letter represents a piece under Player B's control. The initial
-# position of the game is displayed by this program in the following way.
+# position of the game is displayed by this program in the following way
+# (not to scale).
 
 # -------------
 # -------------
-#   G   L   E
-#   *   C   *
-#   *   c   *
-#   e   l   g
+#    1   2   3
+# 1  G   L   E
+# 2  *   C   *
+# 3  *   c   *
+# 4  e   l   g
 # -------------
 # -------------
 
 # Pieces captured by Player A will appear in the lower bar and pieces captured
 # by Player B will appear in the upper bar.
-
-
-#initialstate = {'lion' : ([a,(4,2)], [b,(1,2)]), \
-#                'giraffe' : ([a,(4,3)], [b,(1,1)]), \
-#                'elephant' : ([a,(4,1)], [b,(1,3)]), \
-#                'chick' : ([a,(3,2)], [b,(2,2)]), \
-#                'hen' :  ([None,None], [None,None]) }
 
 # Give a visual representation of a board piece.
 
