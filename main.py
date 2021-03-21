@@ -3,7 +3,6 @@
 
 # This program, main.py, is the main user interface.
 
-from copy import deepcopy
 from board import initialstate, capturewin, noncapturewin
 from board_display import display
 from board_input import enter, commandinstructions
@@ -11,6 +10,23 @@ from alphabeta import alphabeta
 
 # Constants indicating the players involved.
 a, b = 'A', 'B'
+
+# The user controls Player A and the program controls Player B. Player A is
+# the ''south'' player (the player controlling the pieces l, g, e, c below) and
+# Player B is the ''north'' player controlling the pieces L, G, E, C below).
+#
+# Initial position of the game:
+# ---------------
+# ---------------
+#    1   2   3
+# 1  G   L   E
+# 2  *   C   *
+# 3  *   c   *
+# 4  e   l   g
+# ---------------
+# ---------------
+
+# This function runs during Player A's turn.
 
 def playerA(board1):
     command = input("Your turn: ")
@@ -43,6 +59,8 @@ def playerA(board1):
 
     return board2
 
+# This function runs during Player B's turn.
+
 def playerB(board2, ply):
     print('Thinking ...')
 
@@ -70,6 +88,8 @@ def playerB(board2, ply):
 
     return board1
 
+# Asks the user if he/she wants to learn about the game controls.
+
 def commandsquery():
     print()
     print("To move or drop the pieces, this program uses specific commands.")
@@ -88,6 +108,8 @@ def commandsquery():
         if learn == 0:
             break
 
+# Asks the user about who should make the first move.
+            
 def orderquery():
     while True:
         print()
@@ -101,6 +123,8 @@ def orderquery():
         if first == 0 or first == 1:
             break
     return first
+
+# Asks the user for the level of difficulty the machine should play at.
 
 def levelquery():
     while True:
@@ -122,6 +146,8 @@ def levelquery():
             break
 
     return level + 2
+
+# Runs the user interface.
 
 def main():
     print()
