@@ -21,7 +21,8 @@
 # functions in board.py) : 1
 
 # In addition to using the alpha-beta pruning algorithm, the following is
-# done to skew scores.
+# done to skew scores when not at the root node (root node of the search tree
+# for alpha beta pruning).
 
 # If neither Player A nor Player B is considered to have won, then add
 # 0.01 to the score if Player B has at least two more pieces than Player A
@@ -54,12 +55,15 @@ a, b = 'A', 'B'
 
 # There are three functions below that run this program. alphabeta returns an
 # optimal move (move = moving a piece or dropping a piece) whereas maximizer
-# and minimizer return integers representing scores. Don't directly call
-# maximizer or minimizer, call alphabeta. Maximizer and minimizer recursively
-# call each other and run when alphabeta is called. alphabeta has additional
-# code for randomizing optimal moves. In alphabeta, the randomization is
-# performed in such a way that the alpha-beta pruning algorithm is not
-# compromised.
+# and minimizer return integers representing scores. alphabeta is used to
+# perform alpha-beta pruning at the root node of the search tree. maximizer
+# and minimizer are run when performing alpha-beta pruning at the other nodes.
+
+# Don't directly call maximizer or minimizer, call alphabeta. Maximizer and
+# minimizer recursively call each other and run when alphabeta is called.
+# alphabeta has additional code for randomizing optimal moves. In alphabeta,
+# the randomization is performed in such a way that the alpha-beta pruning
+# algorithm is not compromised.
 
 # This function represents the maximizing player, Player B, in the modified
 # alpha-beta pruning algorithm (alpha-beta pruning + skewing scores as
