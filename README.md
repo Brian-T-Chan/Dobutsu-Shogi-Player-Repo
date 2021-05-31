@@ -1,5 +1,12 @@
 # Dobutsu-Shogi-Player-Repo
-This repository contains a computer program that plays Dobutsu Shogi. It uses alpha-beta pruning and it has five levels of difficulty (ranging from 3 ply to 7 ply). It uses a command-line style user interface. To run the program, run main.py. In addition to the licensing file and (this) readme file, the repository contains the following six files.
+This repository contains a computer program that plays Dobutsu Shogi. Dobutsu Shogi, also known as Animal Shogi, is a popular board game for
+programmers and hobbyists (mostly in Japan). The game was designed by a professional Shogi player and intended for children learning Shogi. Due to the relatively small size of this board game, I was thinking of applying the minimax algorithm to it as a first solo project on GitHub. Subsequently, I found that alpha-beta pruning dramatically sped up my program's performance and allowed me to increase search depth. I made small modifications to the standard alpha-beta pruning algorithm in order for my program to evaluate moves even more quickly and accurately.
+
+My program has five levels of difficulty (ranging from 3 ply to 7 ply). The lowest level, Level 1, is
+the easiest level and the program only looks three moves ahead (1 move = 1 player moves or drops one piece). The highest Level 5, is the hardest
+level and the program looks seven moves ahead. The lower the level, the quicker the program will respond.
+
+My program uses a command-line style user interface. To run the program, run main.py. In addition to the licensing file and (this) readme file, the repository contains the following six files.
 
 alphabeta.py : Runs the alpha-beta pruning algorithm to determine moves.
 
